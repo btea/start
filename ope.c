@@ -33,7 +33,9 @@ int main()
     printf("变量c的大小为 %lu\n", sizeof(c));
     /* & 和 * 运算符 */
     ptr = &a;
+    *ptr = 20;
     printf("a的地址为 %d\n", ptr);
+    printf("a的地址为 %p\n", ptr);
     printf("*ptr 是 %d\n", *ptr);
 
     return 0;
