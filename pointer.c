@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/**
+ * 函数指针
+*/
+
+int max(int a, int b)
+{
+    return a > b ? a : b;
+}
+
 int main()
 {
     int var = 10;
@@ -13,5 +22,14 @@ int main()
     /* 空指针 NULL */
     int *ptr = NULL;
     printf("ptr 的地址是：%p\n", ptr);
+
+    /* 函数指针 */
+    // int (*fn)(int, int) = &max;
+
+    // 定义函数指针变量时，可以不指定参数个数以及类型
+    int (*fn)() = &max;
+    int v = fn(10);
+
+    printf("20与10较大的数值为：%d\n", v);
     return 0;
 }
