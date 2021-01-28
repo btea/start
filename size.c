@@ -2,16 +2,31 @@
 #include <stdbool.h>
 
 // 1字节对齐
-// #pragma pack(2)
+
+// #pragma pack(1)
+struct B
+{
+    char a[9];
+} AA;
+
+typedef struct C
+{
+    char a[9];
+} CC;
+
 struct A
 {
     /* data */
-    char a;
-    int b;
+    char b[7];
+    char a[9];
+    // int b;
     double c;
     // char d[3];
-    short e;
+    // short e;
+    // struct B f;
+    // CC g;
 } abc;
+
 // #pragma pack()
 
 int main()
