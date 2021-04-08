@@ -1,2 +1,4 @@
 #except
 *.exe
+*.o
+**/*.exe
